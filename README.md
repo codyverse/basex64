@@ -78,12 +78,11 @@ While `AES-CTR` could fulfill these requirements, `Python` does not have native 
   ```
   This will run 100 iterations of random data encryption and decryption with random parameters to ensure the integrity of the cipher.
 
-- Encrypt inline data with the IV slicing, for example with, `-s 8`:
+- Encrypt inline data with the IV slicing using, for example, `--vector-slice 8`:
   ```
   python3 basex64.py -e -k your_secret_key --inline "Hello, World!" -s 8
-  374d794a20c+U4QAm0AjyUhe3F95cdcfd8
   ```
-  In this case, `8` IV characters are added at the beginning, and the remainder is left at the end of the ciphertext. Obviously, if specify `--vector-length 16` and `--vector-slice 16`, the entire IV will be moved to the beginning of the ciphertext.
+  The encryption result will be `374d794a20c+U4QAm0AjyUhe3F95cdcfd8`. In this case, `8` IV characters (`374d794a`) are added at the beginning, and the remainder (`95cdcfd8`) is left at the end of the data ciphertext (`20c+U4QAm0AjyUhe3F`). Obviously, if specify `--vector-length 16` and `--vector-slice 16`, the entire IV (`374d794a95cdcfd8`) will be moved to the beginning of the ciphertext and the result will be `20c+U4QAm0AjyUhe3F374d794a95cdcfd8`.
 
   This changes the structure of the ciphertext and adds an additional layer of security, since without knowing the encryption parameters, an attacker cannot directly recover the IV from the ciphertext.
   **Important**: To decrypt the ciphertext, you must specify the same `--vector-slice` value used during encryption.
