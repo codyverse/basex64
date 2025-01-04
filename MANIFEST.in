@@ -1,0 +1,7 @@
+recursive-include basex64 *.py
+
+include README.md LICENSE.txt CHANGELOG.md
+
+exclude *.yapf
+exclude *.pyc
+exclude __pycache__

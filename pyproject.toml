@@ -1,0 +1,13 @@
+[tool.flit.metadata]
+module = "BaseX64"
+author = "Andrii Burkatskyi aka andr11b"
+author-email = "4ndr116@gmail.com"
+home-page = "https://github.com/codyverse/basex64"
+description-file = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+keywords = "cipher, cryptography, encryption, base64, git"
+
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
