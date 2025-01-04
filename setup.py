@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="BaseX64",
+    name="basex64",
     version="0.0.1.250102",
     description="A simple cryptographic tool for storing data in distributed version control systems like Git.",
     long_description=open("README.md").read(),
