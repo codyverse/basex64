@@ -1,6 +1,6 @@
 """
 Module:         BaseX64
-Description:    A simple cryptographic tool based on a Base64-like encoding scheme with dynamic XOR shifts.
+Description:    A simple cryptographic tool for storing data in distributed version control systems like Git.
 Author:         Andrii Burkatskyi aka andr11b
 Year:           2025
 Version:        0.0.1.250102
