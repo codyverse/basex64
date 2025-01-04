@@ -47,7 +47,7 @@ While `AES-CTR` could fulfill these requirements, `Python` does not have native 
   -l, --vector-length Length of the initialization vector (IV). Default: 16.
   -s, --vector-slice  Slice n symbols from the IV and prepend them to the ciphertext. Default: 0.
   -f, --force         Force rewrite of output file if it exists.
-      --self-test      Self-test mode to verify encryption/decryption integrity with random data.
+      --self-test     Self-test mode to verify encryption/decryption integrity with random data.
 ```
 
 ### Examples
